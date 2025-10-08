@@ -1,0 +1,155 @@
+:root {
+    --size: 46px;
+    /* sticker size */
+    --gap: 6px;
+    --bg: #0b1020;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, Arial, sans-serif
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #07102a, #0b1020);
+    color: #e6eef8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.app {
+    width: 980px;
+    max-width: 96%;
+    padding: 28px
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 18px
+}
+
+.cube-area {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start
+}
+
+.faces {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 18px
+}
+
+.face-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.face-name {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #cfe3ff
+}
+
+.face {
+    display: grid;
+    grid-template-columns: repeat(3, var(--size));
+    grid-template-rows: repeat(3, var(--size));
+    gap: var(--gap);
+    background: transparent;
+    padding: 8px;
+    border-radius: 8px
+}
+
+.sticker {
+    width: var(--size);
+    height: var(--size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15)
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.controls .row {
+    display: flex;
+    gap: 8px
+}
+
+button {
+    background: #14203a;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #dcefff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+button:hover {
+    transform: translateY(-2px)
+}
+
+.hint {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #9fb6d8
+}
+
+.legend {
+    margin-top: 18px
+}
+
+footer {
+    text-align: center;
+    margin-top: 18px;
+    color: #9fb6d8
+}
+
+
+/* sticker colors */
+.c-white {
+    background: #ffffff
+}
+
+.c-red {
+    background: #d32f2f
+}
+
+.c-blue {
+    background: #1976d2
+}
+
+.c-orange {
+    background: #ff8f00
+}
+
+.c-green {
+    background: #2e7d32
+}
+
+.c-yellow {
+    background: #fbc02d
+}
+
+
+/* responsive */
+@media (max-width:720px) {
+    .cube-area {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .faces {
+        grid-template-columns: repeat(3, auto)
+    }
+}
