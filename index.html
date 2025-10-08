@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rubik's Cube - Simple App</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="app">
+        <h1>Rubik's Cube (3x3) - Interactive</h1>
+
+
+        <section class="cube-area">
+            <div class="faces">
+                <!-- Faces will be injected by JS -->
+            </div>
+
+
+            <div class="controls">
+                <div class="row">
+                    <button data-move="U">U</button>
+                    <button data-move="U'">U'</button>
+                    <button data-move="R">R</button>
+                    <button data-move="R'">R'</button>
+                    <button data-move="F">F</button>
+                    <button data-move="F'">F'</button>
+                </div>
+                <div class="row">
+                    <button id="scramble">Scramble</button>
+                    <button id="reset">Reset</button>
+                    <button id="random-move">Random Move</button>
+                </div>
+                <p class="hint">Tip: You can also press keys: U, R, F (add Shift for counter-clockwise)</p>
+            </div>
+        </section>
+
+
+        <section class="legend">
+            <h2>How it works</h2>
+            <p>This is a simple DOM-based 3x3 cube simulator showing 6 faces. Use the controls to rotate faces. It
+                tracks cube state and updates the stickers.</p>
+        </section>
+
+
+        <footer>Made with plain HTML, CSS &amp; JavaScript</footer>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
